@@ -13,6 +13,14 @@ app.get('/', function(req, res) {
     res.render('index.ejs');
 })
 
+app.get('/responsive', function(req, res) {
+    res.render('responsive.ejs');
+})
+
+app.get('/backgrounds', function(req, res) {
+    res.render('backgrounds.ejs');
+})
+
 /* On redirige vers la todolist si la page demandée n'est pas trouvée */
 app.use(function(req, res, next){
     res.redirect('/');
