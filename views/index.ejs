@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>fullPage.js A simple Demo</title>
+  <meta name="author" content="Dramane Bamba" />
+  <meta name="description" content="One page site" />
+  <meta name="keywords"  content="fullpage,design,javascript,jquery" />
+  <meta name="Resource-type" content="Document" />
+
+
+  <link rel="stylesheet" type="text/css" href="/dist/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/scrolloverflow.js"></script>
+
+  <script type="text/javascript" src="/dist/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+
+  //JAVASCRIPT PARAMETERS
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      //Navigation
+      menu: '#menu',
+      lockAnchors: false,
+      anchors:['firstPage', 'secondPage','thirdPage','fourthPage'],
+      navigation: false,
+      navigationPosition: 'right',
+      navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
+      showActiveTooltip: false,
+      slidesNavigation: false,
+      slidesNavPosition: 'bottom',
+
+      //Scrolling
+      css3: true,
+      scrollingSpeed: 700,
+      autoScrolling: true,
+      fitToSection: true,
+      fitToSectionDelay: 1000,
+      scrollBar: false,
+      easing: 'easeInOutCubic',
+      easingcss3: 'ease',
+      loopBottom: false,
+      loopTop: false,
+      loopHorizontal: true,
+      continuousVertical: false,
+      continuousHorizontal: false,
+      scrollHorizontally: false,
+      interlockedSlides: false,
+      dragAndMove: false,
+      offsetSections: false,
+      resetSliders: false,
+      fadingEffect: false,
+      normalScrollElements: '#element1, .element2',
+      scrollOverflow: false,
+      scrollOverflowOptions: null,
+      touchSensitivity: 15,
+      normalScrollElementTouchThreshold: 5,
+      bigSectionsDestination: null,
+
+      //Accessibility
+      keyboardScrolling: true,
+      animateAnchor: true,
+      recordHistory: true,
+
+      //Design
+      controlArrows: true,
+      verticalCentered: true,
+      sectionsColor : ['#ccc', '#fff'],
+      paddingTop: '3em',
+      paddingBottom: '10px',
+      fixedElements: '#header, .footer',
+      responsiveWidth: 0,
+      responsiveHeight: 0,
+      responsiveSlides: false,
+
+      //Custom selectors
+      sectionSelector: '.section',
+      slideSelector: '.slide',
+
+      lazyLoading: true,
+
+      //events
+      onLeave: function(index, nextIndex, direction){},
+      afterLoad: function(anchorLink, index){},
+      afterRender: function(){},
+      afterResize: function(){},
+      afterResponsive: function(isResponsive){},
+      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+      onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+  });
+  </script>
+</head>
+
+<body>
+
+  <div id="fullpage">
+    <div class="section">
+    	<div class="slide" data-anchor="slide1"> Slide 111111111 </div>
+    	<div class="slide" data-anchor="slide2"> Slide 222222222 </div>
+    	<div class="slide" data-anchor="slide3"> Slide 333333333 </div>
+    	<div class="slide" data-anchor="slide4"> Slide 444444444 </div>
+    </div>
+    <div class="section">
+      <div class="slide" data-anchor="slide1"> Slide 111111111 </div>
+      <div class="slide" data-anchor="slide2"> Slide 222222222 </div>
+      <div class="slide" data-anchor="slide3"> Slide 333333333 </div>
+      <div class="slide" data-anchor="slide4"> Slide 444444444 </div>
+    </div>
+  </div>
+
+</body>
+</html>
