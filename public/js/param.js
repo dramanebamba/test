@@ -7,7 +7,7 @@ $(document).ready(function() {
     navigation: false,
     navigationPosition: 'right',
     navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide','fifthSlide'],
-    showActiveTooltip: false,
+    showActiveTooltip: true,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
 
