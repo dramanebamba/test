@@ -1,4 +1,6 @@
 var express = require('express');
+var https = require('https');
+var fs = require('fs');
 var session = require('cookie-session'); // Charge le middleware de sessions
 var bodyParser = require('body-parser'); // Charge le middleware de gestion des paramètres
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -7,6 +9,11 @@ var app = express();
 //Définition du dossier public
 app.use(express.static('public'));
 
+https.createServer({ 
+        key: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/privkey1.pem"),
+        cert: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/fullchain1.pem"),
+        ca: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/chain1.pem")
+}, app).listen(443);
 
 /* On affiche la todolist et le formulaire */
 app.get('/', function(req, res) {
