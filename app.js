@@ -26,5 +26,5 @@ app.use(function(req, res, next){
     res.redirect('/');
 })
 
-.listen(8080);
-console.log("http://localhost:8080");
+.listen(3000);
+console.log("Serveur à l'écoute");
