@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Exposé sur Google Analytics - David HU et Dramane Bamba</title>
+  <meta name="author" content="David Hu et Dramane Bamba" />
+  <meta name="description" content="Présentation de Google Analytics" />
+  <meta name="keywords"  content="google,analytics,dauphine,paris" />
+  <meta name="Resource-type" content="Document" />
+
+
+  <link rel="stylesheet" type="text/css" href="/dist/jquery.fullpage.css" />
+  <link rel="stylesheet" type="text/css" href="/examples/examples.css" />
+  <style>
+  /* Style for our header texts
+  * --------------------------------------- */
+  h1{
+    font-size: 4em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+  }
+  .intro p{
+    color: #fff;
+  }
+  /* Centered texts in each section
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+    vertical-align: top;
+  }
+  /* Bottom menu
+  * --------------------------------------- */
+  #infoMenu li a {
+    color: #fff;
+  }
+  </style>
+
+  <!--[if IE]>
+  <script type="text/javascript">
+  var console = { log: function() {} };
+</script>
+<![endif]-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="/vendors/scrolloverflow.js"></script>
+
+<script type="text/javascript" src="/dist/jquery.fullpage.js"></script>
+<script type="text/javascript" src="/examples/examples.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#fullpage').fullpage({
+    anchors: ['introduction', 'firstPage', 'secondPage', '3rdPage','conclusion'],
+    sectionsColor: ['#336699', '#1BBC9B', '#7E8F7C', '#5900b3', '#006699'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+    responsiveWidth: 900,
+    afterResponsive: function(isResponsive){
+
+    }
+  });
+});
+</script>
+
+</head>
+<body>
+  <ul id="menu">
+    <li data-menuanchor="introduction"><a href="#introduction">Google Analytics</a></li>
+    <li data-menuanchor="firstPage"><a href="#firstPage">Qu'est-ce que s'est ?</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">A quoi ça sert ?</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Comment ça marche ?</a></li>
+    <li data-menuanchor="3rdPage"><a href="#conclusion">En conclusion</a></li>
+  </ul>
+  <div id="fullpage">
+    <div class="section fp-auto-height-responsive" id="section0">
+      <div class="intro">
+        <h1>Google Analytics</h1>
+        <p>Presenté par David Hu et Dramane Bamba</p>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div class="section" id="section1">
+      <div class="slide" id="slide1">
+        <div class="intro">
+          <h1>Qu'est-ce que s'est ?</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide2">
+        <h1>La petite histoire</h1>
+      </div>
+
+      <div class="slide" id="slide3">
+        <h1>Un outil d'analyse d'audience</h1>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="slide" id="slide1">
+        <div class="intro">
+          <h1>A quoi ça sert ?</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide2">
+        <div class="intro">
+          <h1>Analyser son audience ...</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide3">
+        <div class="intro">
+          <h1>pour connaitre le comportement de ses auditeurs ...</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide4">
+        <div class="intro">
+          <h1>afin d'élaborer des stratégies pour améliorer son audience.</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section3">
+      <div class="slide" id="slide1">
+        <div class="intro">
+          <h1>Comment ça marche ?</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide2">
+        <div class="intro">
+          <h1>GA.js</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide3">
+        <div class="intro">
+          <h1>Les cookies</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide4">
+        <div class="intro">
+          <h1>$$$$</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section fp-auto-height-responsive" id="section4">
+      <div class="slide" id="slide1">
+        <div class="intro">
+          <h1>En conclusion</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide2">
+        <div class="intro">
+          <h1>Avantages</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide3">
+        <div class="intro">
+          <h1>Inconvénients</h1>
+        </div>
+      </div>
+
+      <div class="slide" id="slide4">
+        <div class="intro">
+          <h1>Merci à vous</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
