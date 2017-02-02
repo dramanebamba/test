@@ -9,11 +9,11 @@ var app = express();
 //Définition du dossier public
 app.use(express.static('public'));
 
-// https.createServer({
-//         key: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/privkey1.pem"),
-//         cert: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/fullchain1.pem"),
-//         ca: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/chain1.pem")
-// }, app).listen(443);
+https.createServer({
+        key: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/privkey1.pem"),
+        cert: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/fullchain1.pem"),
+        ca: fs.readFileSync("/etc/letsencrypt/archive/dramane.fr/chain1.pem")
+}, app).listen(443);
 
 /* On affiche la todolist et le formulaire */
 app.get('/', function(req, res) {
